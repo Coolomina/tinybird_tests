@@ -17,10 +17,10 @@
     concurrency: ${{ github.workflow }}-${{ github.event.pull_request.number }}
 
     jobs:
-        ci: # ci using environments from workspace 'PabloCabron'
-          uses: tinybirdco/ci/.github/workflows/ci.yml@v1.1.4
-          with:
-            data_project_dir: .
-          secrets:
-            admin_token: ${{ secrets.ADMIN_TOKEN }}  # set admin token associated to an account in GitHub secrets
-            tb_host: https://api.tinybird.co
+      ci: # ci using environments from workspace 'PabloCabron'
+        uses: Coolomina/ci_tinybird/.github/workflows/ci.yml@feat/cache
+        with:
+          data_project_dir: .
+        secrets:
+          tb_admin_token: ${{ secrets.ADMIN_TOKEN }}  # set admin token associated to an account in GitHub secrets
+          tb_host: https://api.tinybird.co
