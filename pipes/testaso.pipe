@@ -1,9 +1,0 @@
-TOKEN "testaso_endpoint_read_3383" READ
-
-NODE annual_enterprise_survey_2021_financial_year_provisional_csv_pipe_3955_0
-SQL >
-
-    SELECT year, value, variable_code FROM annual_enterprise_survey_2021_financial_year_provisional_csv
-    WHERE year > 2013
-
-

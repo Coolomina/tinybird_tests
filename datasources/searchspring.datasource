@@ -1,0 +1,9 @@
+DESCRIPTION >
+    Generated from searchspring.json
+
+SCHEMA >
+    `Badges` String `json:$.Badges`,
+    `Brand` String `json:$.Brand`
+
+ENGINE "MergeTree"
+ENGINE_SORTING_KEY "Badges, Brand"

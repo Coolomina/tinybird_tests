@@ -1,0 +1,29 @@
+DESCRIPTION >
+	Create a data source using this CSV file, using the UI (csv_ui) and the CLI (csv_cli)
+Append the same file (yes, again) using the CLI and UI.
+Result: You’ll have 2 data sources with 2x the data. How would you check the data is correct?
+
+
+NODE untitled_pipe_1183_0
+SQL >
+
+    SELECT count() count1 FROM new_datasource
+
+
+
+NODE untitled_pipe_1183_1
+SQL >
+
+    SELECT count() count2 FROM newdatasource2 
+
+
+
+NODE untitled_pipe_1183_2
+SQL >
+
+    SELECT (
+      (SELECT count1 FROM untitled_pipe_1183_0) as size1,
+      (SELECT count2 FROM untitled_pipe_1183_1) as size2
+    ) HAVING size1 == size2
+
+

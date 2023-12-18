@@ -1,0 +1,27 @@
+DESCRIPTION >
+	Exercises:
+Load taxis table (one month) with sorting key in “trip_distance,pickup_datetime”
+Run a query filtering by on day pickup_date: explain what’s happening
+Run a query that filters by trip_distance between 1 and 2 miles: explain what’s happening in terms of scan size and number of rows
+Load taxis table with an engine ReplacingMergeTree with Sorting key “passenger_count”. 
+Analyze the result and explain what’s going on
+Load taxis table (one month) with sorting key in “pickup_date, dropoff_date”
+Filter by dropoff_date (1 day) and explain what happens
+Filter by both the same day (just one day) and explain what happens
+
+
+NODE exercise5_0
+SQL >
+
+    SELECT trip_distance FROM yellow_tripdata_2018_01
+    WHERE (trip_distance > 1) AND (trip_distance < 2)
+
+
+
+NODE exercise5_1
+SQL >
+
+    SELECT store_and_fwd_flag FROM yellow_tripdata_2018_01
+
+
+

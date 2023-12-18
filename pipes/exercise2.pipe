@@ -1,0 +1,29 @@
+DESCRIPTION >
+	Run some analysis
+Create a pipe that shows
+Number of trips with 4 passengers
+Avg distance per hour of the day for trips with 4 passengers
+
+
+NODE exercise2_0
+SQL >
+
+    SELECT count() FROM newdatasource2 WHERE passenger_count == 4
+
+
+
+NODE exercise2_1
+DESCRIPTION >
+    Avg distance per hour of the day for trips with 4 passengers
+
+SQL >
+
+    SELECT(
+      toHour(tpep_pickup_datetime) as hour,
+      avg(trip_distance) as avg
+    ) FROM newdatasource2
+    where passenger_count == 4
+    group by hour
+    order by hour
+
+

@@ -1,0 +1,17 @@
+DESCRIPTION >
+	Load a NDJSON & Parquet file into Tinybird using an url
+CLI
+UI
+Send events to events API (/v0/event)
+Create a datasource and use curl to send events
+Do it with any programming language
+Send many events in batch
+Create a table with specific schema and load a NDJSON (using the CLI)
+
+
+NODE exercise4_0
+SQL >
+
+    SELECT * FROM searchspring 
+
+

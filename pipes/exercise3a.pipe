@@ -1,0 +1,20 @@
+DESCRIPTION >
+	Create a pipe and use it (both using UI and CLI)
+Create an endpoint (ep_cli an ep_ui) that return the avg distance per hour for trips given the number of passengers
+
+
+TOKEN "exercise3a_endpoint_read_9126" READ
+
+TOKEN "token_157348" READ
+
+NODE exercise3a_0
+SQL >
+
+    %
+    SELECT toHour(tpep_pickup_datetime) as hour, avg(trip_distance) as avg
+    FROM newdatasource2
+    where passenger_count == {{Int32(lim, 0)}}
+    group by hour
+    order by hour
+
+
