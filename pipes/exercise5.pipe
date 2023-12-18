@@ -6,8 +6,6 @@ Run a query that filters by trip_distance between 1 and 2 miles: explain what’
 Load taxis table with an engine ReplacingMergeTree with Sorting key “passenger_count”. 
 Analyze the result and explain what’s going on
 Load taxis table (one month) with sorting key in “pickup_date, dropoff_date”
-Filter by dropoff_date (1 day) and explain what happens
-Filter by both the same day (just one day) and explain what happens
 
 
 NODE exercise5_0

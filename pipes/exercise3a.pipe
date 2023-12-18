@@ -3,8 +3,6 @@ DESCRIPTION >
 Create an endpoint (ep_cli an ep_ui) that return the avg distance per hour for trips given the number of passengers
 
 
-TOKEN "exercise3a_endpoint_read_9126" READ
-
 TOKEN "token_157348" READ
 
 NODE exercise3a_0
